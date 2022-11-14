@@ -33,9 +33,16 @@ while True:
     if event == sg.WIN_CLOSED:
         break
     elif event == 'add':
-        pass
+        name = values[1]
+        photo_path = values[0]
+
+        print(f'Adding {name}')
+        add_person(name,photo_path)
+        print(f'Person added ✓')
+
     elif event == 'show':
-        pass
+        list_people()
+        
     elif event == 'Camera':
         pass
 

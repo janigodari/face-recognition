@@ -13,6 +13,7 @@ Face recognition program to recognise faces from webcam in real time. Program wa
 #### System: macOs Ventura 13.0
 
 <br>
+
 ### Setup:
 
 Brew and Python3 need to be installed

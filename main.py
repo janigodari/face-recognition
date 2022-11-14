@@ -42,8 +42,8 @@ while True:
 
     elif event == 'show':
         list_people()
-        
+
     elif event == 'Camera':
-        pass
+        import face_re
 
 window.close()

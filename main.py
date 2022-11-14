@@ -1,4 +1,21 @@
 import PySimpleGUI as sg
+import csv
+import shutil
+import os
+
+def add_person(name,photo):
+    with open('people.csv', 'a') as file:
+        writer = csv.writer(file)
+        data = [str(name), str('faces/' + os.path.basename(photo))]
+        writer.writerow(data)
+    
+    shutil.copy(photo,"faces/")
+
+def list_people():
+    with open('people.csv', 'r') as file:
+        reader = csv.reader(file)
+        for row in reader:
+            print(f'| {row[0]} | {row[1]} |')
 
 sg.theme('Dark Grey 7')
 
